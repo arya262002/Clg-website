@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar container */
+
+.nav{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    z-index: 4;
+    top: 0;
+}
+.nav img{
+    height: 6.8rem;
+    width: 6.8rem;
+}
+.nav a{
+    color:white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav a:hover {
+    color:red;
+}
+@media screen and (max-width: 903px) {
+    /* Hide the navigation links by default on smaller screens */
+    .nav a{
+        display: none;
+    }
+    .fa-bars{
+        color: white;
+        margin-right: 30px;
+        font-size: 2rem;
+    }
+    .nav{
+        justify-content: space-between;
+    }
+}
+/* ..................................................................................... */
+.head{
+    font-size: 1.18rem;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    width: 100%;
+}
+.head {
+    font-size: 1.18rem;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    overflow: hidden; /* Hide overflow to keep text within container */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.head h1 {
+    display: inline-block; /* Make the heading inline-block to allow animation */
+    animation: moveText 10s linear infinite; /* Adjust the animation duration and speed */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* ................................................................................. */
+.slider-box{
+display: flex;
+margin-top: 20px;
+justify-content: space-between;
+}
+.slider{
+    width: 100%;
+    background-color:black;
+}
+.slider-content{
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-right: 60px;
+    font-family: 'Poppins';
+    color: white;
+}
+.slider img{
+    height: 400px;
+    width: 700px;
+}
+.slider-content h1{
+    margin-bottom: 20px;
+    color: red;
+}
+.slider-content p{
+    color:white;
+    font-family: Rubik;
+    font-weight: 100px;
+    font-style: normal;
+    line-height: 1.6rem;
+    text-transform: none;
+    font-size: 1rem;
+}
+.slider-content, .slider-img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 944px) {
+    .slider-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider-content {
+        margin-bottom: 27px;
+    }
+    .slider-img {
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .slider{
+        overflow: hidden;
+    }
+}
+/* ........................................................................................... */
+.teamhead{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Rubik;
+    background-color: white;
+}
+.teams
+{
+    width: 100%;
+}
+.display-team{
+    display: flex;
+    justify-content: center;
+    margin-left: 28px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+.display-team img{
+    height: 120px;
+    width: 120px;
+}
+.display-team img {
+    height: 199px;
+    width: 180px;
+}
+.team1{
+    margin-right: 15px;
+}
+
+/* .................................................events............................................ */
+
+.event-head  {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    color: #bc0303; /* White text color */
+    font-family: GT America, sans-serif;
+    font-size: 3.5rem;
+    position: relative; /* Ensure it stacks above the black layer */
+    z-index: 2; /* Set a higher z-index to stack above the black layer */
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    position: relative; /* Ensure it stacks above the black layer */
+    z-index: 2; /* Set a higher z-index to stack above the black layer */
+    color: #f4f1f1; /* Light gray text color */
+    font-family: GT America, Rubik;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.content li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+/* Style the unordered list */
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 13px;
+}
+
+/* Style list items */
+.content li::before {
+    content: "\2022"; /* Bullet character */
+    color: #dedede; /* Light gray bullet color */
+    display: inline-block;
+    width: 1em; /* Adjust spacing between bullet and text */
+    margin-left: -1em; /* Negative margin to overlap bullet and text */
+}
+
+/* Set the background color and transparency */
+.events::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(6, 2, 31, 0.9); */
+    background-color: rgba(6, 2, 31, 0.9); /* Black with 60% opacity */
+    z-index: 1; /* Ensure it's behind the content */
+}
+.events {
+    margin-top: 30px;
+    width: 100%;
+    background-image: url(./teamimages/background-image.jpg);
+    background-size: cover;
+    position: relative;
+}
+.content ul{
+    color: #c6bcbc;
+}
+.set{
+    display: flex;
+}
+/* .................................................................................. */
+.gallery-main{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.gallery-main h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+    font-size: 3.1rem;
+}
+.gallery-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.gcard1,
+.gcard2,
+.gcard3 {
+    margin-bottom: 25px; /* Adjust this value to control the spacing between rows */
+}
+.gallery-card p{
+color: black;
+text-align: center;
+padding: 12px;
+margin-top: 5px;
+font-size: 1rem;
+}
+.gcard1{
+    width: 358px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.gcard1 img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    overflow: hidden;
+}
+.gcard2{
+    width: 358px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.gcard2 img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    overflow: hidden;
+}
+.gcard3{
+    width: 354px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.gcard3 img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    overflow: hidden;
+    transition: all 1.1s;
+}
+.gcard1 img:hover{
+    transform: scale(1.2);
+}
+/* .............................................................. */
+.footer{
+    background-color: black;
+    width: 100%;
+}
+.sections{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+.sections h3{
+    font-size: 1rem;
+    padding-top: 4rem;
+    opacity: 0.8;
+    margin-bottom: 1.7rem;
+}
+.secfour{
+    padding-top: 4rem;
+}
+.sections p{
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+.secfour input{
+    background-color: transparent;
+    border: 1px solid #c6bcbc;
+    padding-left: 8px;
+    margin-right: 10px;
+}
+.secfour button{
+    background-color: red;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.8rem;
+}
+.secfour h6{
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    margin-right: 1rem;
+  }
+  .fa-linkedin {
+    background: #bc0303;
+    color: white;
+    margin-right: 1rem;
+  }
+  .fa-instagram {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    color: white;
+  }
+  .icons{
+    margin-top: 1rem;
+  }
+  .emailsec input ::-ms-value{
+    background-color: black;
+  }
+  @media only screen and (max-width: 740px){
+   .sectwo{
+    display: none;
+   }
+  }
+  @media only screen and (max-width: 599px){
+    .sectwo, .secthree{
+     display: none;
+    }
+   }
